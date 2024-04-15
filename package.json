@@ -1,6 +1,6 @@
 {
   "name": "weixin-idea",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "微信开发工具便捷命令",
   "main": "index.js",
   "keywords": [
@@ -9,6 +9,10 @@
   "scripts": {},
   "bin": {
     "weixin-idea": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1464691115/weixin-idea.git"
   },
   "author": "",
   "license": "ISC"

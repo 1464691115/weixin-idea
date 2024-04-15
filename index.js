@@ -24,12 +24,13 @@ function run() {
       console.log('如无反应请检查开发工具安全->服务端口是否开启')
 
       const self_env = { 'development': 'dev', 'production': 'build' }[process.env.NODE_ENV] || 'dev'
+      const self_project_url = path.resolve(
+        process.cwd(),
+        params[0] || `./dist/${self_env}/mp-weixin`,
+      )
 
       exec(
-        `cd ${weixin} && cli open --project ${path.resolve(
-          __dirname,
-          params[0] || `./dist/${self_env}/mp-weixin`,
-        )}`,
+        `cd ${weixin} && cli open --project ${self_project_url}`,
         (err) => {
           if (err) {
             console.log('启动失败，正在重新启动...', e)
